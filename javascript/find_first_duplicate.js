@@ -1,5 +1,13 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  const dupVar = []
+  for (const number of arr){
+    if (dupVar.includes(number) === false){
+      dupVar.push(number)
+    } else if (dupVar.includes(number) === true) {
+      return number
+    }
+  }
+  return -1
 }
 
 if (require.main === module) {
@@ -17,3 +25,5 @@ module.exports = findFirstDuplicate;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+// 
